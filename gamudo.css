@@ -1,0 +1,60 @@
+body{
+    font: normal 20pt Arial;
+    background-color: #FFA11E;
+    cursor: default;
+}
+h1{
+    text-align: center;
+    color: #FF5712;
+}
+#text{
+    text-align: center;
+}
+#texto{
+    font-size: 20pt;
+    margin-top: 160px;
+    border-radius: 10px;
+    color: rgb(100, 18, 32);
+    background-color: #FF5712;
+    border-color: #FF5712;
+    outline: rgb(58, 53, 53);
+    width: 900px;
+    height: 50px;
+}
+#texto::-moz-selection { background: #d44710; }
+#texto::selection { background: #d44710; }
+label{
+    font: normal 20pt Arial;
+    color: rgb(82, 11, 23);
+}
+#radios{
+    margin-top: 80px;
+}
+#escolha{
+    all:unset;
+    border: 1px solid black;
+    margin-left: 10px;
+    display: inline-block;
+    width: 30px;
+    height: 15px;
+    outline:2px solid #FF5712;
+    outline-offset: -2px;
+}
+#escolha:checked{
+    background-color: #FF5712;
+}
+button{
+    margin-top: 100px;
+    font-size: 20pt;
+    text-align: center;
+    background-color: #FF5712;
+    border-color: #FF5712;
+    border-radius: 10px;
+    color: rgb(82, 11, 23);
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #ec4f11;
+    border-color: #ec4f11;
+}
