@@ -5,7 +5,8 @@ body{
 }
 h1{
     text-align: center;
-    color: #FF5712;
+    color: #F94800;
+    -webkit-text-stroke: 2px rgb(28, 5, 9);
 }
 #text{
     text-align: center;
@@ -15,9 +16,9 @@ h1{
     margin-top: 160px;
     border-radius: 10px;
     color: rgb(100, 18, 32);
-    background-color: #FF5712;
-    border-color: #FF5712;
-    outline: rgb(58, 53, 53);
+    background-color: #F94800;
+    border-color: #040101;
+outline: black;
     width: 900px;
     height: 50px;
 }
@@ -37,24 +38,23 @@ label{
     display: inline-block;
     width: 30px;
     height: 15px;
-    outline:2px solid #FF5712;
+    outline: 2px solid #0D0502;
     outline-offset: -2px;
 }
 #escolha:checked{
-    background-color: #FF5712;
+    background-color: #F94800;
 }
 button{
     margin-top: 100px;
     font-size: 20pt;
     text-align: center;
-    background-color: #FF5712;
-    border-color: #FF5712;
+    background-color: #F94800;
+    border-color: #0F0502;
     border-radius: 10px;
-    color: rgb(82, 11, 23);
+    color: rgb(82, 11, 11);
     cursor: pointer;
 }
 
 button:hover{
     background-color: #ec4f11;
-    border-color: #ec4f11;
 }
