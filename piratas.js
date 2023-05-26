@@ -85,7 +85,7 @@ function clicar()
 
         if(buscador == 'Redecanais')
         {
-            window.open(`https://redecanais.wf/search.php?keywords=${text.replaceAll(' ', '+')}`, '_blank');
+            window.open(`https://redecanais.cx/search.php?keywords=${text.replaceAll(' ', '+')}`, '_blank');
         }
         if(buscador == 'Vizer')
         {
@@ -97,7 +97,7 @@ function clicar()
         }
         if(buscador == 'Megafilmes')
         {
-            window.open(`https://megafilmeshd.top/?s=${text.replaceAll(' ', '+')}`, '_blank');
+            window.open(`https://megafilmes.blog/?s=${text.replaceAll(' ', '+')}`, '_blank');
         }
     }
 }
