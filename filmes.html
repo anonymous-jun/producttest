@@ -12,6 +12,7 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
+            color: #FFFFFF !important;
         }
         @keyframes fade-in {
             0% {
@@ -252,6 +253,10 @@
         function wait(ms) {
             return new Promise(resolve => setTimeout(resolve, ms));
         }
+
+        if (window.matchMedia("(max-width: 600px)").matches) {
+    document.write("Você está no mobile, considere usar o modo para computador.") ;
+  }
 
         /*
         1- https://oneflix.one/?s=variável
