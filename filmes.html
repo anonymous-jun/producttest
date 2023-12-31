@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,19 +13,16 @@
         body {
             font-family: 'Poppins', sans-serif;
         }
-
         @keyframes fade-in {
             0% {
                 opacity: 0;
                 transform: translateY(-20px);
             }
-
             100% {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-
         * {
             padding: 0;
             margin: 0;
@@ -35,25 +31,20 @@
             border: none;
             box-sizing: border-box;
         }
-
         html {
             overflow: hidden;
         }
-
         body {
             height: 100vh;
             text-align: center;
         }
-
         h1 {
             font-size: 4rem !important;
         }
-
         h1,
         p {
             color: #FFFFFF !important;
         }
-
         .content {
             display: flex;
             flex-direction: column;
@@ -62,43 +53,34 @@
             opacity: 0;
             animation: fade-in 1s ease-in-out forwards;
         }
-
         .space {
             margin-top: 70px;
         }
-
         p,
         button,
         input {
             margin: 20px auto;
         }
-
         input {
             width: 50% !important;
             border: 2px solid transparent !important;
             transition: 0.6s !important;
         }
-
         input:hover {
             background-color: #dadada;
         }
-
         button {
             transition: 0.4s;
         }
-
         button:hover {
             background-color: #b82b00 !important;
         }
-
         input:focus {
             background-color: #dadada;
         }
-
         span {
             color: white !important;
         }
-
         .video-container {
             position: fixed;
             top: 0;
@@ -108,14 +90,12 @@
             overflow: hidden;
             z-index: -1;
         }
-
         /* Style the video element */
         .video-container video {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-
         /* Create an overlay using a semi-transparent background color */
         .overlay {
             position: absolute;
@@ -125,34 +105,6 @@
             height: 100%;
             background-color: #1a1a1a2c;
         }
-
-        @media (max-width: 512px) {
-
-            input,
-            p,
-            span {
-                font-size: 0.8rem !important;
-            }
-
-            h1 {
-                font-size: 2rem !important;
-            }
-
-            .space {
-                margin-top: 27vh;
-            }
-
-            i{
-                font-size: 1.2rem !important;
-            }
-
-            a{
-                width: 10% !important;
-                height: 100px !important;
-            }
-
-        }
-
         #msg {
             opacity: 0;
             transition: 1.3s;
@@ -164,26 +116,41 @@
         a:hover{
             box-shadow:0 0 0.5em #ffffffb9;
         }
+        @media (max-width: 768px) {
+            input,
+            p,
+            span {
+                font-size: 1.0rem !important;
+            }
+            h1 {
+                font-size: 2.5rem !important;
+            }
+            i{
+                font-size: 1.2rem !important;
+                margin-top: 3px !important;
+            }
+            a{
+                width: 10% !important;
+                height: 27px !important;
+            }
+            .space{
+                margin-top: 27vh !important;
+            }
+        }
     </style>
 </head>
-
 <body>
-
     <div class="video-container">
         <video autoplay muted loop>
             <source src="video (1080p).mp4" type="video/mp4">
         </video>
         <div class="overlay"></div>
     </div>
-
     <div class="content">
         <div class="space"></div>
         <h1 class="title is-1">NeoBox - Filmes</h1>
         <p>Aqui você pode encontrar filmes lançamentos para assistir.</p>
-
         <input type="text" name="" id="nome" class="input is-rounded">
-
-
         <div class="field">
             <label class="b-radio radio">
                 <input type="radio" name="group_1" value="One" id="One">
@@ -206,26 +173,21 @@
                 <span class="control-label">Mrfilmes</span>
             </label>
         </div>
-
-
         <button onclick="enviar()" class="button is-primary"
             style="background-color: #FF3D00; box-shadow:0 0 0.5em #ff3c00b9;">Enviar</button>
-
         <div class="notification is-danger is-centered" style="width: 0px !important; background-color: #FF3D00;"
             id="msg">
             <button class="delete" onclick="msgevent(0)" id="msgdel" style="margin-top: -3px;"></button>
             <span id="msgt"></span>
         </div>
-        <a href="index" class="" style="width: 100px; height: 8vh ; background-color: rgb(39, 39, 39); border-radius: 10px; position: fixed;
+        <a href="index" class="" style="width: 100px; height: 50px ; background-color: rgb(39, 39, 39); border-radius: 10px; position: fixed;
         bottom: -10%;
         right: 20px;
         z-index: 9999; color: white !important;">
             <i class="fas fa-arrow-left" style="font-size: 3rem;"></i>
         </a>
     </div>
-
     <script>
-
         const nome = document.getElementById('nome');
         const radio1 = document.getElementById('One');
         const radio2 = document.getElementById('Two');
@@ -234,7 +196,6 @@
         const msg = document.getElementById('msg');
         const msgt = document.getElementById('msgt');
         const msgdel = document.getElementById('msgdel');
-
         function enviar() {
             var nomeS = String(String(nome.value).trim()).replace(/ /g, "+");
             while (nomeS.includes('++') == true) {
@@ -250,19 +211,15 @@
             else {
                 site(nomeS);
             }
-
         }
-
         function site(n) {
             radio1.checked == true ? window.open(`https://oneflix.one/?s=${n}`, '_blank') : radio2.checked == true ? window.open(`https://megaflix.click/procurar/${n}`, '_blank') : radio3.checked == true ? window.open(`https://megaflix.co/?s=${n}`, '_blank') : window.open(`https://mrfilmes.online/?s=${n}`, '_blank');
         }
-
         async function msgevent(t) {
             if (t == 0) {
                 msg.style.opacity = '0';
                 msg.style.width = '0px';
                 msgt.innerText = '';
-
             } else {
                 if (msg.style.opacity == '1') {
                     msg.style.transition = '0.3s';
@@ -282,15 +239,11 @@
                 if (index < t.length) {
                     // Get the current character
                     const char = t.charAt(index);
-
                     // Output the character
                     msgt.innerHTML += char;
-
                     // Increment the index for the next character
                     index++;
-
                     await wait(20);
-
                     // Call typeWriter() again after a certain timeout
                     setTimeout(escrever(t), 100); // Adjust the timeout value to control the typing speed
                 }
@@ -300,18 +253,12 @@
             return new Promise(resolve => setTimeout(resolve, ms));
         }
 
-  // Check if the user is on a mobile device
-  if (window.matchMedia("(max-width: 300px)").matches) {
-    alert("This is a mobile device!");
-  }
-
         /*
         1- https://oneflix.one/?s=variável
         2- https://megaflix.click/procurar/variável
-        3- https://megaflix.co/?s=variável
+      3- https://megaflix.co/?s=variável
         4- https://mrfilmes.online/?s=variável
         */
     </script>
 </body>
-
 </html>
