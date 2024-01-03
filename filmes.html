@@ -11,8 +11,9 @@
     <link rel="shortcut icon" href="Neobox.png" type="image/x-icon">
     <link rel="stylesheet" href="main.min.css">
     <meta property="og:title" content="NeoBox - Filmes">
-    <meta property="og:description" content="O Neobox é um site que oferece conteúdo gratuito, incluindo filmes, séries, livros, cursos e muito mais.">
-    <meta property="og:image" content="https://neoboxproducts.netlify.app/neobox.png">
+    <meta property="og:description"
+        content="O Neobox é um site que oferece conteúdo gratuito, incluindo filmes, séries, livros, cursos e muito mais.">
+    <meta property="og:image" content="Neobox.png">
     <meta property="og:url" content="https://neoboxproducts.netlify.app">
     <meta property="og:type" content="website">
 
@@ -166,17 +167,24 @@
             a {
                 width: 10% !important;
                 height: 27px !important;
+                margin-bottom: -120% !important;
+            }
+
+            input{
+                width: 90% !important;
             }
 
             .space {
                 margin-top: 50% !important;
             }
+
         }
 
         @media (max-width: 425px) {
-            .space{
+            .space {
                 margin-top: 20% !important;
             }
+
             input,
             p,
             span {
@@ -186,6 +194,8 @@
             h1 {
                 font-size: 2.0rem !important;
             }
+
+            
         }
     </style>
 </head>
@@ -202,7 +212,7 @@
         <h1 class="title is-1">NeoBox - Filmes</h1>
         <p style="width: 80% !important;">Aqui você pode encontrar filmes lançamentos para assistir.</p>
         <input type="text" name="" id="nome" class="input is-rounded">
-        <div class="field">
+        <div class="field" id="radios">
             <label class="b-radio radio">
                 <input type="radio" name="group_1" value="One" id="One">
                 <span class="check"></span>
@@ -232,7 +242,7 @@
             <span id="msgt"></span>
         </div>
         <a href="index" class="" style="width: 100px; height: 50px ; background-color: rgb(39, 39, 39); border-radius: 10px; position: fixed;
-        margin-bottom: -120%;
+        margin-bottom: -40%;
         right: 20px;
         z-index: 9999; color: white !important;">
             <i class="fas fa-arrow-left" style="font-size: 3rem;"></i>
@@ -304,10 +314,16 @@
             return new Promise(resolve => setTimeout(resolve, ms));
         }
 
-        if (window.matchMedia("(max-width: 600px)").matches) {
-            alert("Você está no mobile, considere usar o modo para computador.");
-        }
+        nome.addEventListener("focus", () => {
+            inputField.scrollIntoView({ behavior: "smooth", block: "center" });
+        });
 
+        /*
+        1- https://oneflix.one/?s=variável
+        2- https://megaflix.click/procurar/variável
+      3- https://megaflix.co/?s=variável
+        4- https://mrfilmes.online/?s=variável
+        */
     </script>
 </body>
 
