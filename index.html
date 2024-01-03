@@ -29,6 +29,34 @@
             #content{
                 margin-top: 140px !important;
             }
+            #text{
+                width: 80% !important;
+            }
+        }
+        
+        @media (max-width: 425px) {
+            body{
+                font-size: 0.7rem !important;
+            }
+            h1{
+                font-size: 1.5rem !important;
+                margin-top: 10px !important;
+            }
+            img{
+                width: 30% !important;
+            }
+            button{
+                font-size: 0.6rem !important;
+            }
+            .buttons{
+                width: 80% !important;
+            }
+            #text{
+                width: 80% !important;
+            }
+            #content{
+                margin-top: 100px !important;
+            }
         }
         
     </style>
@@ -36,11 +64,11 @@
 <body>
     <div id="content">
     <img src="logo.png" alt="" style="width: 200px; margin: auto; display: block;">
-    <h1 class="title ">Neobox - Home</h1>
-    <div style="width: 50%; margin: auto;" class="is-text">
-    <p>O Neobox é um site que oferece conteúdo gratuito, incluindo filmes, séries, livros, cursos e muito mais. Com uma interface amigável, os usuários podem encontrar e desfrutar de entretenimento e conhecimento sem precisar pagar. É o destino ideal para quem busca conteúdo gratuito e de qualidade.</p>
+    <h1 class="title">Neobox - Home</h1>
+    <div style="width: 50%; margin: auto;" class="is-text" id="text">
+    <p>O <strong>Neobox</strong> é um site que oferece conteúdo gratuito, incluindo filmes, séries, livros, cursos e muito mais. Com uma interface amigável, os usuários podem encontrar e desfrutar de entretenimento e conhecimento sem precisar pagar. É o destino ideal para quem busca conteúdo gratuito e de qualidade.</p>
 </div>
-<div class="" style="display: flex; justify-content: space-between; width: 400px; margin-top: 15px;">
+<div class="buttons" style="display: flex; justify-content: space-between; width: 400px; margin-top: 15px;">
     <button class="button" onclick="location.href='filmes'">Filmes</button>
     <button class="button" onclick="location.href='cursos'">Cursos</button>
     <button class="button" onclick="location.href='games'">Games</button>
