@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,16 +15,19 @@
             font-family: 'Poppins', sans-serif;
             color: #FFFFFF !important;
         }
+
         @keyframes fade-in {
             0% {
                 opacity: 0;
                 transform: translateY(-20px);
             }
+
             100% {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
+
         * {
             padding: 0;
             margin: 0;
@@ -32,20 +36,25 @@
             border: none;
             box-sizing: border-box;
         }
+
         html {
             overflow: hidden;
         }
+
         body {
             height: 100vh;
             text-align: center;
         }
+
         h1 {
             font-size: 4rem !important;
         }
+
         h1,
         p {
             color: #FFFFFF !important;
         }
+
         .content {
             display: flex;
             flex-direction: column;
@@ -54,34 +63,43 @@
             opacity: 0;
             animation: fade-in 1s ease-in-out forwards;
         }
+
         .space {
             margin-top: 70px;
         }
+
         p,
         button,
         input {
             margin: 20px auto;
         }
+
         input {
             width: 50% !important;
             border: 2px solid transparent !important;
             transition: 0.6s !important;
         }
+
         input:hover {
             background-color: #dadada;
         }
+
         button {
             transition: 0.4s;
         }
+
         button:hover {
             background-color: #b82b00 !important;
         }
+
         input:focus {
             background-color: #dadada;
         }
+
         span {
             color: white !important;
         }
+
         .video-container {
             position: fixed;
             top: 0;
@@ -91,12 +109,14 @@
             overflow: hidden;
             z-index: -1;
         }
+
         /* Style the video element */
         .video-container video {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
+
         /* Create an overlay using a semi-transparent background color */
         .overlay {
             position: absolute;
@@ -106,40 +126,64 @@
             height: 100%;
             background-color: #1a1a1a2c;
         }
+
         #msg {
             opacity: 0;
             transition: 1.3s;
         }
-        
-        a{
+
+        a {
             transition: 0.3s;
         }
-        a:hover{
-            box-shadow:0 0 0.5em #ffffffb9;
+
+        a:hover {
+            box-shadow: 0 0 0.5em #ffffffb9;
         }
+
         @media (max-width: 768px) {
+
             input,
             p,
             span {
-                font-size: 1.0rem !important;
+                font-size: 1.2rem !important;
             }
+
             h1 {
-                font-size: 2.5rem !important;
+                font-size: 2.7rem !important;
             }
-            i{
+
+            i {
                 font-size: 1.2rem !important;
                 margin-top: 3px !important;
             }
-            a{
+
+            a {
                 width: 10% !important;
                 height: 27px !important;
             }
+
+            .space {
+                margin-top: 50% !important;
+            }
+        }
+
+        @media (max-width: 425px) {
             .space{
-                margin-top: 27vh !important;
+                margin-top: 20% !important;
+            }
+            input,
+            p,
+            span {
+                font-size: 0.8rem !important;
+            }
+
+            h1 {
+                font-size: 2.0rem !important;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="video-container">
         <video autoplay muted loop>
@@ -150,7 +194,7 @@
     <div class="content">
         <div class="space"></div>
         <h1 class="title is-1">NeoBox - Filmes</h1>
-        <p>Aqui você pode encontrar filmes lançamentos para assistir.</p>
+        <p style="width: 80% !important;">Aqui você pode encontrar filmes lançamentos para assistir.</p>
         <input type="text" name="" id="nome" class="input is-rounded">
         <div class="field">
             <label class="b-radio radio">
@@ -182,7 +226,7 @@
             <span id="msgt"></span>
         </div>
         <a href="index" class="" style="width: 100px; height: 50px ; background-color: rgb(39, 39, 39); border-radius: 10px; position: fixed;
-        bottom: -10%;
+        margin-bottom: -120%;
         right: 20px;
         z-index: 9999; color: white !important;">
             <i class="fas fa-arrow-left" style="font-size: 3rem;"></i>
@@ -255,15 +299,10 @@
         }
 
         if (window.matchMedia("(max-width: 600px)").matches) {
-    alert("Você está no mobile, considere usar o modo para computador.") ;
-  }
-
-        /*
-        1- https://oneflix.one/?s=variável
-        2- https://megaflix.click/procurar/variável
-      3- https://megaflix.co/?s=variável
-        4- https://mrfilmes.online/?s=variável
-        */
+            alert("Você está no mobile, considere usar o modo para computador.");
+        }
+        
     </script>
 </body>
+
 </html>
