@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoBox - Games</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="shortcut icon" href="Neobox.png" type="image/x-icon">
+    <style>
+        .b-radio.radio input[type=radio]:not(:disabled)+.check{transition: 0.7s;}.b-radio.radio{-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.b-radio.radio{outline:none;display:inline-flex;align-items:center}.b-radio.radio:not(.button){margin-right:0.5em}.b-radio.radio:not(.button)+.radio:last-child{margin-right:0}.b-radio.radio+.radio{margin-left:0}.b-radio.radio input[type=radio]{position:absolute;left:0;opacity:0;outline:none;z-index:-1}.b-radio.radio input[type=radio]+.check{display:flex;flex-shrink:0;position:relative;cursor:pointer;width:1.25em;height:1.25em;transition:background 150ms ease-out;border-radius:50%;border:2px solid #f0f0f0}.b-radio.radio input[type=radio]+.check:before{content:"";display:flex;position:absolute;left:50%;margin-left:calc(-1.25em * 0.5);bottom:50%;margin-bottom:calc(-1.25em * 0.5);width:1.25em;height:1.25em;transition:transform 150ms ease-out;border-radius:50%;transform:scale(0);background-color:#FFC107;}.b-radio.radio input[type=radio]+.check.is-white:before{background:#fff}.b-radio.radio input[type=radio]+.check.is-black:before{background:#0a0a0a}.b-radio.radio input[type=radio]+.check.is-light:before{background:#f5f5f5}.b-radio.radio input[type=radio]+.check.is-dark:before{background:#363636}.b-radio.radio input[type=radio]+.check.is-primary:before{background:#FFC107}.b-radio.radio input[type=radio]+.check.is-link:before{background:#485fc7}.b-radio.radio input[type=radio]+.check.is-info:before{background:#3e8ed0}.b-radio.radio input[type=radio]+.check.is-success:before{background:#48c78e}.b-radio.radio input[type=radio]+.check.is-warning:before{background:#ffe08a}.b-radio.radio input[type=radio]+.check.is-danger:before{background:#f14668}.b-radio.radio input[type=radio]:checked+.check{border-color:#FFC107;}.b-radio.radio input[type=radio]:checked+.check.is-white{border-color:#fff}.b-radio.radio input[type=radio]:checked+.check.is-black{border-color:#0a0a0a}.b-radio.radio input[type=radio]:checked+.check.is-light{border-color:#f5f5f5}.b-radio.radio input[type=radio]:checked+.check.is-dark{border-color:#363636}.b-radio.radio input[type=radio]:checked+.check.is-primary{border-color:#FFC107}.b-radio.radio input[type=radio]:checked+.check.is-link{border-color:#485fc7}.b-radio.radio input[type=radio]:checked+.check.is-info{border-color:#3e8ed0}.b-radio.radio input[type=radio]:checked+.check.is-success{border-color:#ffd773}.b-radio.radio input[type=radio]:checked+.check.is-warning{border-color:#ffe08a}.b-radio.radio input[type=radio]:checked+.check.is-danger{border-color:#f14668}.b-radio.radio input[type=radio]:checked+.check:before{transform:scale(0.5)}.b-radio.radio input[type=radio]:focus+.check{box-shadow:0 0 0.5em rgba(122,122,122,0.8)}.b-radio.radio input[type=radio]:focus:checked+.check{box-shadow:0 0 0.5em #ffc107b6}.b-radio.radio input[type=radio]:focus:checked+.check.is-white{box-shadow:0 0 0.5em rgba(255,255,255,0.8)}.b-radio.radio input[type=radio]:focus:checked+.check.is-black{box-shadow:0 0 0.5em rgba(10,10,10,0.8)}.b-radio.radio input[type=radio]:focus:checked+.check.is-light{box-shadow:0 0 0.5em rgba(245,245,245,0.8)}.b-radio.radio input[type=radio]:focus:checked+.check.is-dark{box-shadow:0 0 0.5em rgba(54,54,54,0.8)}.b-radio.radio input[type=radio]:focus:checked+.check.is-primary{box-shadow:0 0 0.5em rgba(0,209,178,0.8)}.b-radio.radio input[type=radio]:focus:checked+.check.is-link{box-shadow:0 0 0.5em rgba(72,95,199,0.8)}.b-radio.radio input[type=radio]:focus:checked+.check.is-info{box-shadow:0 0 0.5em rgba(62,142,208,0.8)}.b-radio.radio input[type=radio]:focus:checked+.check.is-success{box-shadow:0 0 0.5em rgba(72,199,142,0.8)}.b-radio.radio input[type=radio]:focus:checked+.check.is-warning{box-shadow:0 0 0.5em rgba(255,224,138,0.8)}.b-radio.radio input[type=radio]:focus:checked+.check.is-danger{box-shadow:0 0 0.5em rgba(241,70,104,0.8)}.b-radio.radio .control-label{padding-left:calc(0.75em - 1px)}.b-radio.radio.button{display:flex}.b-radio.radio.button.is-selected{z-index:1}.b-radio.radio[disabled]{opacity:0.5}.b-radio.radio:hover input[type=radio]:not(:disabled)+.check{border-color:#FFC107;}.b-radio.radio:hover input[type=radio]:not(:disabled)+.check.is-white{border-color:#fff}.b-radio.radio:hover input[type=radio]:not(:disabled)+.check.is-black{border-color:#0a0a0a}.b-radio.radio:hover input[type=radio]:not(:disabled)+.check.is-light{border-color:#f5f5f5}.b-radio.radio:hover input[type=radio]:not(:disabled)+.check.is-dark{border-color:#363636}.b-radio.radio:hover input[type=radio]:not(:disabled)+.check.is-primary{border-color:#FFC107}.b-radio.radio:hover input[type=radio]:not(:disabled)+.check.is-link{border-color:#485fc7}.b-radio.radio:hover input[type=radio]:not(:disabled)+.check.is-info{border-color:#3e8ed0}.b-radio.radio:hover input[type=radio]:not(:disabled)+.check.is-success{border-color:#48c78e}.b-radio.radio:hover input[type=radio]:not(:disabled)+.check.is-warning{border-color:#ffe08a}.b-radio.radio:hover input[type=radio]:not(:disabled)+.check.is-danger{border-color:#f14668}.b-radio.radio.is-small{border-radius:2px;font-size:.75rem}.b-radio.radio.is-medium{font-size:1.25rem}.b-radio.radio.is-large{font-size:1.5rem}
+
+    </style>
+    <meta property="og:title" content="NeoBox - Games">
+    <meta property="og:description"
+        content="O Neobox é um site que oferece conteúdo gratuito, incluindo filmes, séries, livros, cursos e muito mais.">
+    <meta property="og:image" content="Neobox.png">
+    <meta property="og:url" content="https://neoboxproducts.netlify.app">
+    <meta property="og:type" content="website">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #FFFFFF !important;
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            outline: none;
+            text-decoration: none;
+            border: none;
+            box-sizing: border-box;
+        }
+
+        html {
+            overflow: hidden;
+        }
+
+        body {
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 4rem !important;
+        }
+
+        h1,
+        p {
+            color: #FFFFFF !important;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: 1s;
+            opacity: 0;
+            animation: fade-in 1s ease-in-out forwards;
+        }
+
+        .space {
+            margin-top: 70px;
+        }
+
+        p,
+        button,
+        input {
+            margin: 20px auto;
+        }
+
+        input {
+            width: 50% !important;
+            border: 2px solid transparent !important;
+            transition: 0.6s !important;
+        }
+
+        input:hover {
+            background-color: #dadada;
+        }
+
+        button {
+            transition: 0.4s;
+        }
+
+        button:hover {
+            background-color: #cc9b09 !important;
+            color: #e9e9e9 !important;
+        }
+
+        input:focus {
+            background-color: #dadada;
+        }
+
+        span {
+            color: white !important;
+        }
+
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        /* Style the video element */
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Create an overlay using a semi-transparent background color */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #00000025;
+        }
+
+        #msg {
+            opacity: 0;
+            transition: 1.3s;
+        }
+
+        a {
+            transition: 0.3s;
+        }
+
+        a:hover {
+            box-shadow: 0 0 0.5em #2e0c02;
+        }
+
+        @media (max-width: 768px) {
+
+            input,
+            p,
+            span {
+                font-size: 1.2rem !important;
+            }
+
+            h1 {
+                font-size: 2.7rem !important;
+            }
+
+            i {
+                font-size: 1.2rem !important;
+                margin-top: 3px !important;
+            }
+
+            a {
+                width: 10% !important;
+                height: 27px !important;
+                margin-bottom: -120% !important;
+            }
+
+            input{
+                width: 90% !important;
+            }
+
+            .space {
+                margin-top: 50% !important;
+            }
+
+        }
+
+        @media (max-width: 425px) {
+            .space {
+                margin-top: 20% !important;
+            }
+
+            input,
+            p,
+            span {
+                font-size: 0.8rem !important;
+            }
+
+            h1 {
+                font-size: 2.0rem !important;
+            }
+
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="Design sem nome.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+    </div>
+    <div class="content">
+        <div class="space"></div>
+        <h1 class="title is-1">NeoBox - Games</h1>
+        <p style="width: 80% !important;">Aqui você pode encontrar games de graça para jogar.</p>
+        <input type="text" name="" id="nome" class="input is-rounded" enterkeyhint="search">
+        <div class="field" id="radios">
+            <label class="b-radio radio">
+                <input type="radio" name="group_1" value="One" id="One">
+                <span class="check"></span>
+                <span class="control-label">1337x</span>
+            </label>
+            <label class="b-radio radio">
+                <input type="radio" name="group_1" value="Two" id="Two">
+                <span class="check"></span>
+                <span class="control-label">RepackGames</span>
+            </label>
+            <label class="b-radio radio">
+                <input type="radio" name="group_1" value="Three" id="Three">
+                <span class="check"></span>
+                <span class="control-label">G4u</span>
+            </label>
+            <label class="b-radio radio">
+                <input type="radio" name="group_1" value="Four" id="Four">
+                <span class="check"></span>
+                <span class="control-label">SteamRip</span>
+            </label>
+        </div>
+        <button onclick="enviar()" class="button is-primary"
+            style="background-color: #FFC107; box-shadow:0 0 0.5em #ffc107b6;">Enviar</button>
+        <div class="notification is-danger is-centered" style="width: 0px !important; background-color: #FF5722;"
+            id="msg">
+            <button class="delete" onclick="msgevent(0)" id="msgdel" style="margin-top: -3px;"></button>
+            <span id="msgt"></span>
+        </div>
+        <a href="index" class="" style="width: 100px; height: 50px ; background-color: #FF5722; border-radius: 10px; position: fixed;
+        margin-bottom: -40%;
+        right: 20px;
+        z-index: 9999; color: white !important;">
+            <i class="fas fa-arrow-left" style="font-size: 3rem;"></i>
+        </a>
+    </div>
+    <script>
+        const nome = document.getElementById('nome');
+        const radio1 = document.getElementById('One');
+        const radio2 = document.getElementById('Two');
+        const radio3 = document.getElementById('Three');
+        const radio4 = document.getElementById('Four');
+        const msg = document.getElementById('msg');
+        const msgt = document.getElementById('msgt');
+        const msgdel = document.getElementById('msgdel');
+        nome.addEventListener('keydown', function (event) {
+            if (event.keyCode === 13) {
+                enviar();
+            }
+        });
+        function enviar() {
+            var nomeS = String(String(nome.value).trim()).replace(/ /g, "+");
+            while (nomeS.includes('++') == true) {
+                nomeS = nomeS.replace('++', '+');
+                nome.value = nomeS.replace(/\+/g, " ");
+            }
+            if (nomeS.length <= 1) {
+                msgevent("Digite o nome do game para baixar.");
+            }
+            else if (radio1.checked == false && radio2.checked == false && radio3.checked == false && radio4.checked == false) {
+                msgevent("Selecione o site em que deseja baixar.");
+            }
+            else {
+                site(nomeS);
+            }
+        }
+        function site(n) {
+            radio1.checked == true ? window.open(`https://1337x.to/search/${n}/1/`, '_blank') : radio2.checked == true ? window.open(`https://repack-games.com/?s=${n}`, '_blank') : radio3.checked == true ? window.open(`https://g4u.to/en/search/?str=${n}`, '_blank') : window.open(`https://steamrip.com/?s=${n}`, '_blank');
+        }
+        async function msgevent(t) {
+            if (t == 0) {
+                msg.style.opacity = '0';
+                msg.style.width = '0px';
+                msgt.innerText = '';
+            } else {
+                if (msg.style.opacity == '1') {
+                    msg.style.transition = '0.3s';
+                    msg.style.opacity = '0';
+                    msg.style.width = '0px';
+                    msgt.innerText = '';
+                    await wait(300);
+                }
+                msg.style.transition = '1.3s';
+                msgt.innerText = '';
+                msg.style.opacity = '1';
+                msg.style.width = '400px';
+                index = -1;
+                setTimeout(() => { escrever(t) }, 100);
+            }
+            async function escrever(t) {
+                if (index < t.length) {
+                    // Get the current character
+                    const char = t.charAt(index);
+                    // Output the character
+                    msgt.innerHTML += char;
+                    // Increment the index for the next character
+                    index++;
+                    await wait(20);
+                    // Call typeWriter() again after a certain timeout
+                    setTimeout(escrever(t), 100); // Adjust the timeout value to control the typing speed
+                }
+            }
+        }
+        function wait(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        nome.addEventListener("focus", () => {
+            inputField.scrollIntoView({ behavior: "smooth", block: "center" });
+        });
+
+        /*
+        1- https://oneflix.one/?s=variável
+        2- https://megaflix.click/procurar/variável
+      3- https://megaflix.co/?s=variável
+        4- https://mrfilmes.online/?s=variável
+        */
+    </script>
+</body>
+
+</html>
