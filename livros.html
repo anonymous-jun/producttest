@@ -2,15 +2,22 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NeoBox - Livros</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <link rel="shortcut icon" href="Neobox.png" type="image/x-icon">
+    <link rel="shortcut icon" href="Neobox.png" type="image/x-icon" />
+
+    <meta property="og:title" content="NeoBox - Livros" />
+    <meta property="og:description" content="O Neobox é um site que oferece conteúdo gratuito, incluindo filmes, séries, livros, cursos e muito mais." />
+    <meta property="og:image" content="Neobox.png" />
+    <meta property="og:url" content="https://neoboxproducts.netlify.app/livros" />
+    <meta property="og:type" content="website" />
+
     <style>
-        .b-radio.radio input[type=radio]:not(:disabled)+.check {
+        .b-radio.radio input[type="radio"]:not(:disabled)+.check {
             transition: 0.7s;
         }
 
@@ -19,36 +26,36 @@
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
-            user-select: none
+            user-select: none;
         }
 
         .b-radio.radio {
             outline: none;
             display: inline-flex;
-            align-items: center
+            align-items: center;
         }
 
         .b-radio.radio:not(.button) {
-            margin-right: 0.5em
+            margin-right: 0.5em;
         }
 
         .b-radio.radio:not(.button)+.radio:last-child {
-            margin-right: 0
+            margin-right: 0;
         }
 
         .b-radio.radio+.radio {
-            margin-left: 0
+            margin-left: 0;
         }
 
-        .b-radio.radio input[type=radio] {
+        .b-radio.radio input[type="radio"] {
             position: absolute;
             left: 0;
             opacity: 0;
             outline: none;
-            z-index: -1
+            z-index: -1;
         }
 
-        .b-radio.radio input[type=radio]+.check {
+        .b-radio.radio input[type="radio"]+.check {
             display: flex;
             flex-shrink: 0;
             position: relative;
@@ -57,10 +64,10 @@
             height: 1.25em;
             transition: background 150ms ease-out;
             border-radius: 50%;
-            border: 2px solid #212121
+            border: 2px solid #212121;
         }
 
-        .b-radio.radio input[type=radio]+.check:before {
+        .b-radio.radio input[type="radio"]+.check:before {
             content: "";
             display: flex;
             position: absolute;
@@ -73,228 +80,228 @@
             transition: transform 150ms ease-out;
             border-radius: 50%;
             transform: scale(0);
-            background-color: #A24C4C;
+            background-color: #a24c4c;
         }
 
-        .b-radio.radio input[type=radio]+.check.is-white:before {
-            background: #fff
+        .b-radio.radio input[type="radio"]+.check.is-white:before {
+            background: #fff;
         }
 
-        .b-radio.radio input[type=radio]+.check.is-black:before {
-            background: #0a0a0a
+        .b-radio.radio input[type="radio"]+.check.is-black:before {
+            background: #0a0a0a;
         }
 
-        .b-radio.radio input[type=radio]+.check.is-light:before {
-            background: #f5f5f5
+        .b-radio.radio input[type="radio"]+.check.is-light:before {
+            background: #f5f5f5;
         }
 
-        .b-radio.radio input[type=radio]+.check.is-dark:before {
-            background: #363636
+        .b-radio.radio input[type="radio"]+.check.is-dark:before {
+            background: #363636;
         }
 
-        .b-radio.radio input[type=radio]+.check.is-primary:before {
-            background: #A24C4C
+        .b-radio.radio input[type="radio"]+.check.is-primary:before {
+            background: #a24c4c;
         }
 
-        .b-radio.radio input[type=radio]+.check.is-link:before {
-            background: #485fc7
+        .b-radio.radio input[type="radio"]+.check.is-link:before {
+            background: #485fc7;
         }
 
-        .b-radio.radio input[type=radio]+.check.is-info:before {
-            background: #3e8ed0
+        .b-radio.radio input[type="radio"]+.check.is-info:before {
+            background: #3e8ed0;
         }
 
-        .b-radio.radio input[type=radio]+.check.is-success:before {
-            background: #48c78e
+        .b-radio.radio input[type="radio"]+.check.is-success:before {
+            background: #48c78e;
         }
 
-        .b-radio.radio input[type=radio]+.check.is-warning:before {
-            background: #ffe08a
+        .b-radio.radio input[type="radio"]+.check.is-warning:before {
+            background: #ffe08a;
         }
 
-        .b-radio.radio input[type=radio]+.check.is-danger:before {
-            background: #f14668
+        .b-radio.radio input[type="radio"]+.check.is-danger:before {
+            background: #f14668;
         }
 
-        .b-radio.radio input[type=radio]:checked+.check {
-            border-color: #A24C4C;
+        .b-radio.radio input[type="radio"]:checked+.check {
+            border-color: #a24c4c;
         }
 
-        .b-radio.radio input[type=radio]:checked+.check.is-white {
-            border-color: #fff
+        .b-radio.radio input[type="radio"]:checked+.check.is-white {
+            border-color: #fff;
         }
 
-        .b-radio.radio input[type=radio]:checked+.check.is-black {
-            border-color: #0a0a0a
+        .b-radio.radio input[type="radio"]:checked+.check.is-black {
+            border-color: #0a0a0a;
         }
 
-        .b-radio.radio input[type=radio]:checked+.check.is-light {
-            border-color: #f5f5f5
+        .b-radio.radio input[type="radio"]:checked+.check.is-light {
+            border-color: #f5f5f5;
         }
 
-        .b-radio.radio input[type=radio]:checked+.check.is-dark {
-            border-color: #363636
+        .b-radio.radio input[type="radio"]:checked+.check.is-dark {
+            border-color: #363636;
         }
 
-        .b-radio.radio input[type=radio]:checked+.check.is-primary {
-            border-color: #A24C4C
+        .b-radio.radio input[type="radio"]:checked+.check.is-primary {
+            border-color: #a24c4c;
         }
 
-        .b-radio.radio input[type=radio]:checked+.check.is-link {
-            border-color: #485fc7
+        .b-radio.radio input[type="radio"]:checked+.check.is-link {
+            border-color: #485fc7;
         }
 
-        .b-radio.radio input[type=radio]:checked+.check.is-info {
-            border-color: #3e8ed0
+        .b-radio.radio input[type="radio"]:checked+.check.is-info {
+            border-color: #3e8ed0;
         }
 
-        .b-radio.radio input[type=radio]:checked+.check.is-success {
-            border-color: #ffd773
+        .b-radio.radio input[type="radio"]:checked+.check.is-success {
+            border-color: #ffd773;
         }
 
-        .b-radio.radio input[type=radio]:checked+.check.is-warning {
-            border-color: #ffe08a
+        .b-radio.radio input[type="radio"]:checked+.check.is-warning {
+            border-color: #ffe08a;
         }
 
-        .b-radio.radio input[type=radio]:checked+.check.is-danger {
-            border-color: #f14668
+        .b-radio.radio input[type="radio"]:checked+.check.is-danger {
+            border-color: #f14668;
         }
 
-        .b-radio.radio input[type=radio]:checked+.check:before {
-            transform: scale(0.5)
+        .b-radio.radio input[type="radio"]:checked+.check:before {
+            transform: scale(0.5);
         }
 
-        .b-radio.radio input[type=radio]:focus+.check {
-            box-shadow: 0 0 0.5em rgba(122, 122, 122, 0.8)
+        .b-radio.radio input[type="radio"]:focus+.check {
+            box-shadow: 0 0 0.5em rgba(122, 122, 122, 0.8);
         }
 
-        .b-radio.radio input[type=radio]:focus:checked+.check {
-            box-shadow: 0 0 0.5em #A24C4Cb6
+        .b-radio.radio input[type="radio"]:focus:checked+.check {
+            box-shadow: 0 0 0.5em #a24c4cb6;
         }
 
-        .b-radio.radio input[type=radio]:focus:checked+.check.is-white {
-            box-shadow: 0 0 0.5em rgba(255, 255, 255, 0.8)
+        .b-radio.radio input[type="radio"]:focus:checked+.check.is-white {
+            box-shadow: 0 0 0.5em rgba(255, 255, 255, 0.8);
         }
 
-        .b-radio.radio input[type=radio]:focus:checked+.check.is-black {
-            box-shadow: 0 0 0.5em rgba(10, 10, 10, 0.8)
+        .b-radio.radio input[type="radio"]:focus:checked+.check.is-black {
+            box-shadow: 0 0 0.5em rgba(10, 10, 10, 0.8);
         }
 
-        .b-radio.radio input[type=radio]:focus:checked+.check.is-light {
-            box-shadow: 0 0 0.5em rgba(245, 245, 245, 0.8)
+        .b-radio.radio input[type="radio"]:focus:checked+.check.is-light {
+            box-shadow: 0 0 0.5em rgba(245, 245, 245, 0.8);
         }
 
-        .b-radio.radio input[type=radio]:focus:checked+.check.is-dark {
-            box-shadow: 0 0 0.5em rgba(54, 54, 54, 0.8)
+        .b-radio.radio input[type="radio"]:focus:checked+.check.is-dark {
+            box-shadow: 0 0 0.5em rgba(54, 54, 54, 0.8);
         }
 
-        .b-radio.radio input[type=radio]:focus:checked+.check.is-primary {
-            box-shadow: 0 0 0.5em rgba(0, 209, 178, 0.8)
+        .b-radio.radio input[type="radio"]:focus:checked+.check.is-primary {
+            box-shadow: 0 0 0.5em rgba(0, 209, 178, 0.8);
         }
 
-        .b-radio.radio input[type=radio]:focus:checked+.check.is-link {
-            box-shadow: 0 0 0.5em rgba(72, 95, 199, 0.8)
+        .b-radio.radio input[type="radio"]:focus:checked+.check.is-link {
+            box-shadow: 0 0 0.5em rgba(72, 95, 199, 0.8);
         }
 
-        .b-radio.radio input[type=radio]:focus:checked+.check.is-info {
-            box-shadow: 0 0 0.5em rgba(62, 142, 208, 0.8)
+        .b-radio.radio input[type="radio"]:focus:checked+.check.is-info {
+            box-shadow: 0 0 0.5em rgba(62, 142, 208, 0.8);
         }
 
-        .b-radio.radio input[type=radio]:focus:checked+.check.is-success {
-            box-shadow: 0 0 0.5em rgba(72, 199, 142, 0.8)
+        .b-radio.radio input[type="radio"]:focus:checked+.check.is-success {
+            box-shadow: 0 0 0.5em rgba(72, 199, 142, 0.8);
         }
 
-        .b-radio.radio input[type=radio]:focus:checked+.check.is-warning {
-            box-shadow: 0 0 0.5em rgba(255, 224, 138, 0.8)
+        .b-radio.radio input[type="radio"]:focus:checked+.check.is-warning {
+            box-shadow: 0 0 0.5em rgba(255, 224, 138, 0.8);
         }
 
-        .b-radio.radio input[type=radio]:focus:checked+.check.is-danger {
-            box-shadow: 0 0 0.5em rgba(241, 70, 104, 0.8)
+        .b-radio.radio input[type="radio"]:focus:checked+.check.is-danger {
+            box-shadow: 0 0 0.5em rgba(241, 70, 104, 0.8);
         }
 
         .b-radio.radio .control-label {
-            padding-left: calc(0.75em - 1px)
+            padding-left: calc(0.75em - 1px);
         }
 
         .b-radio.radio.button {
-            display: flex
+            display: flex;
         }
 
         .b-radio.radio.button.is-selected {
-            z-index: 1
+            z-index: 1;
         }
 
         .b-radio.radio[disabled] {
-            opacity: 0.5
+            opacity: 0.5;
         }
 
-        .b-radio.radio:hover input[type=radio]:not(:disabled)+.check {
-            border-color: #A24C4C;
+        .b-radio.radio:hover input[type="radio"]:not(:disabled)+.check {
+            border-color: #a24c4c;
         }
 
-        .b-radio.radio:hover input[type=radio]:not(:disabled)+.check.is-white {
-            border-color: #fff
+        .b-radio.radio:hover input[type="radio"]:not(:disabled)+.check.is-white {
+            border-color: #fff;
         }
 
-        .b-radio.radio:hover input[type=radio]:not(:disabled)+.check.is-black {
-            border-color: #0a0a0a
+        .b-radio.radio:hover input[type="radio"]:not(:disabled)+.check.is-black {
+            border-color: #0a0a0a;
         }
 
-        .b-radio.radio:hover input[type=radio]:not(:disabled)+.check.is-light {
-            border-color: #f5f5f5
+        .b-radio.radio:hover input[type="radio"]:not(:disabled)+.check.is-light {
+            border-color: #f5f5f5;
         }
 
-        .b-radio.radio:hover input[type=radio]:not(:disabled)+.check.is-dark {
-            border-color: #363636
+        .b-radio.radio:hover input[type="radio"]:not(:disabled)+.check.is-dark {
+            border-color: #363636;
         }
 
-        .b-radio.radio:hover input[type=radio]:not(:disabled)+.check.is-primary {
-            border-color: #A24C4C
+        .b-radio.radio:hover input[type="radio"]:not(:disabled)+.check.is-primary {
+            border-color: #a24c4c;
         }
 
-        .b-radio.radio:hover input[type=radio]:not(:disabled)+.check.is-link {
-            border-color: #485fc7
+        .b-radio.radio:hover input[type="radio"]:not(:disabled)+.check.is-link {
+            border-color: #485fc7;
         }
 
-        .b-radio.radio:hover input[type=radio]:not(:disabled)+.check.is-info {
-            border-color: #3e8ed0
+        .b-radio.radio:hover input[type="radio"]:not(:disabled)+.check.is-info {
+            border-color: #3e8ed0;
         }
 
-        .b-radio.radio:hover input[type=radio]:not(:disabled)+.check.is-success {
-            border-color: #48c78e
+        .b-radio.radio:hover input[type="radio"]:not(:disabled)+.check.is-success {
+            border-color: #48c78e;
         }
 
-        .b-radio.radio:hover input[type=radio]:not(:disabled)+.check.is-warning {
-            border-color: #ffe08a
+        .b-radio.radio:hover input[type="radio"]:not(:disabled)+.check.is-warning {
+            border-color: #ffe08a;
         }
 
-        .b-radio.radio:hover input[type=radio]:not(:disabled)+.check.is-danger {
-            border-color: #f14668
+        .b-radio.radio:hover input[type="radio"]:not(:disabled)+.check.is-danger {
+            border-color: #f14668;
         }
 
         .b-radio.radio.is-small {
             border-radius: 2px;
-            font-size: .75rem
+            font-size: 0.75rem;
         }
 
         .b-radio.radio.is-medium {
-            font-size: 1.25rem
+            font-size: 1.25rem;
         }
 
         .b-radio.radio.is-large {
-            font-size: 1.5rem
+            font-size: 1.5rem;
         }
     </style>
-    <meta property="og:title" content="NeoBox - Filmes">
+    <meta property="og:title" content="NeoBox - Filmes" />
     <meta property="og:description"
-        content="O Neobox é um site que oferece conteúdo gratuito, incluindo filmes, séries, livros, cursos e muito mais.">
-    <meta property="og:image" content="Neobox.png">
-    <meta property="og:url" content="https://neoboxproducts.netlify.app">
-    <meta property="og:type" content="website">
+        content="O Neobox é um site que oferece conteúdo gratuito, incluindo filmes, séries, livros, cursos e muito mais." />
+    <meta property="og:image" content="Neobox.png" />
+    <meta property="og:url" content="https://neoboxproducts.netlify.app" />
+    <meta property="og:type" content="website" />
 
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: "Poppins", sans-serif;
         }
 
         @keyframes fade-in {
@@ -359,7 +366,7 @@
             width: 50% !important;
             border: 2px solid transparent !important;
             transition: 0.6s !important;
-            background-color: #F8F8F8 !important;
+            background-color: #f8f8f8 !important;
             border-width: 0.1px !important;
             border-color: #212121 !important;
         }
@@ -455,7 +462,6 @@
             .space {
                 margin-top: 50% !important;
             }
-
         }
 
         @media (max-width: 425px) {
@@ -470,10 +476,8 @@
             }
 
             h1 {
-                font-size: 2.0rem !important;
+                font-size: 2rem !important;
             }
-
-
         }
     </style>
 </head>
@@ -481,103 +485,128 @@
 <body>
     <div class="video-container">
         <video autoplay muted loop>
-            <source src="2.mp4" type="video/mp4">
+            <source src="2.mp4" type="video/mp4" />
         </video>
         <div class="overlay"></div>
     </div>
     <div class="content">
         <div class="space"></div>
         <h1 class="title is-1">NeoBox - Livros</h1>
-        <p style="width: 80% !important;">Aqui você pode encontrar livros de graça para ler.</p>
-        <input type="text" name="" id="nome" class="input is-rounded" enterkeyhint="search">
-        <div class="field" id="radios" style="cursor: default;">
+        <p style="width: 80% !important">
+            Aqui você pode encontrar livros de graça para ler.
+        </p>
+        <input type="text" name="" id="nome" class="input is-rounded" enterkeyhint="search" />
+        <div class="field" id="radios" style="cursor: default">
             <label class="b-radio radio">
-                <input type="radio" name="group_1" value="One" id="One">
+                <input type="radio" name="group_1" value="One" id="One" />
                 <span class="check"></span>
                 <span class="control-label">PtAnnas</span>
             </label>
             <label class="b-radio radio">
-                <input type="radio" name="group_1" value="Two" id="Two">
+                <input type="radio" name="group_1" value="Two" id="Two" />
                 <span class="check"></span>
                 <span class="control-label">Doceru</span>
             </label>
             <label class="b-radio radio">
-                <input type="radio" name="group_1" value="Three" id="Three">
+                <input type="radio" name="group_1" value="Three" id="Three" />
                 <span class="check"></span>
                 <span class="control-label">Lib3</span>
             </label>
             <label class="b-radio radio">
-                <input type="radio" name="group_1" value="Four" id="Four">
+                <input type="radio" name="group_1" value="Four" id="Four" />
                 <span class="check"></span>
                 <span class="control-label">Google</span>
             </label>
         </div>
         <button onclick="enviar()" class="button is-primary"
-            style="background-color: #A24C4C; box-shadow:0 0 0.5em #a24c4cc5;">Enviar</button>
-        <div class="notification is-danger is-centered" style="width: 0px !important; background-color: #A24C4C;"
+            style="background-color: #a24c4c; box-shadow: 0 0 0.5em #a24c4cc5">
+            Enviar
+        </button>
+        <div class="notification is-danger is-centered" style="width: 0px !important; background-color: #a24c4c"
             id="msg">
-            <button class="delete" onclick="msgevent(0)" id="msgdel" style="margin-top: -3px;"></button>
+            <button class="delete" onclick="msgevent(0)" id="msgdel" style="margin-top: -3px"></button>
             <span id="msgt"></span>
         </div>
-        <a href="index" class="" style="width: 100px; height: 50px ; background-color: #A24C4C; border-radius: 10px; position: fixed;
-        margin-bottom: -40%;
-        right: 20px;
-        z-index: 9999; color: white !important;">
-            <i class="fas fa-arrow-left" style="font-size: 3rem;"></i>
+        <a href="index" class="" style="
+          width: 100px;
+          height: 50px;
+          background-color: #a24c4c;
+          border-radius: 10px;
+          position: fixed;
+          margin-bottom: -40%;
+          right: 20px;
+          z-index: 9999;
+          color: white !important;
+        ">
+            <i class="fas fa-arrow-left" style="font-size: 3rem"></i>
         </a>
     </div>
     <script>
-        const nome = document.getElementById('nome');
-        const radio1 = document.getElementById('One');
-        const radio2 = document.getElementById('Two');
-        const radio3 = document.getElementById('Three');
-        const radio4 = document.getElementById('Four');
-        const msg = document.getElementById('msg');
-        const msgt = document.getElementById('msgt');
-        const msgdel = document.getElementById('msgdel');
-        nome.addEventListener('keydown', function (event) {
+        const nome = document.getElementById("nome");
+        const radio1 = document.getElementById("One");
+        const radio2 = document.getElementById("Two");
+        const radio3 = document.getElementById("Three");
+        const radio4 = document.getElementById("Four");
+        const msg = document.getElementById("msg");
+        const msgt = document.getElementById("msgt");
+        const msgdel = document.getElementById("msgdel");
+        nome.addEventListener("keydown", function (event) {
             if (event.keyCode === 13) {
                 enviar();
             }
         });
         function enviar() {
             var nomeS = String(String(nome.value).trim()).replace(/ /g, "+");
-            while (nomeS.includes('++') == true) {
-                nomeS = nomeS.replace('++', '+');
+            while (nomeS.includes("++") == true) {
+                nomeS = nomeS.replace("++", "+");
                 nome.value = nomeS.replace(/\+/g, " ");
             }
             if (nomeS.length <= 1) {
                 msgevent("Digite o nome do livro para ler.");
-            }
-            else if (radio1.checked == false && radio2.checked == false && radio3.checked == false && radio4.checked == false) {
+            } else if (
+                radio1.checked == false &&
+                radio2.checked == false &&
+                radio3.checked == false &&
+                radio4.checked == false
+            ) {
                 msgevent("Selecione o site em que deseja ler.");
-            }
-            else {
+            } else {
                 site(nomeS);
             }
         }
         function site(n) {
-            radio1.checked == true ? window.open(`https://pt.annas-archive.org/search?q=${n}`, '_blank') : radio2.checked == true ? window.open(`https://doceru.com/show/?q=${n}`, '_blank') : radio3.checked == true ? window.open(`https://liber3.eth.limo/#/search?q=${n}`, '_blank') : window.open(`https://www.google.com/search?q=%22${n}%22+pdf&udm`, '_blank');
+            radio1.checked == true
+                ? window.open(`https://pt.annas-archive.org/search?q=${n}`, "_blank")
+                : radio2.checked == true
+                    ? window.open(`https://doceru.com/show/?q=${n}`, "_blank")
+                    : radio3.checked == true
+                        ? window.open(`https://liber3.eth.limo/#/search?q=${n}`, "_blank")
+                        : window.open(
+                            `https://www.google.com/search?q=%22${n}%22+pdf&udm`,
+                            "_blank"
+                        );
         }
         async function msgevent(t) {
             if (t == 0) {
-                msg.style.opacity = '0';
-                msg.style.width = '0px';
-                msgt.innerText = '';
+                msg.style.opacity = "0";
+                msg.style.width = "0px";
+                msgt.innerText = "";
             } else {
-                if (msg.style.opacity == '1') {
-                    msg.style.transition = '0.3s';
-                    msg.style.opacity = '0';
-                    msg.style.width = '0px';
-                    msgt.innerText = '';
+                if (msg.style.opacity == "1") {
+                    msg.style.transition = "0.3s";
+                    msg.style.opacity = "0";
+                    msg.style.width = "0px";
+                    msgt.innerText = "";
                     await wait(300);
                 }
-                msg.style.transition = '1.3s';
-                msgt.innerText = '';
-                msg.style.opacity = '1';
-                msg.style.width = '400px';
+                msg.style.transition = "1.3s";
+                msgt.innerText = "";
+                msg.style.opacity = "1";
+                msg.style.width = "400px";
                 index = -1;
-                setTimeout(() => { escrever(t) }, 100);
+                setTimeout(() => {
+                    escrever(t);
+                }, 100);
             }
             async function escrever(t) {
                 if (index < t.length) {
@@ -594,11 +623,11 @@
             }
         }
         function wait(ms) {
-            return new Promise(resolve => setTimeout(resolve, ms));
+            return new Promise((resolve) => setTimeout(resolve, ms));
         }
 
         nome.addEventListener("focus", () => {
-            inputField.scrollIntoView({ behavior: "smooth", block: "center" });
+            nome.scrollIntoView({ behavior: "smooth", block: "center" });
         });
     </script>
 </body>
